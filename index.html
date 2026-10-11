@@ -100,7 +100,7 @@
     </nav>
   </header>
 
-  <p class="updated">Last updated / Zuletzt aktualisiert: 2026-09-10</p>
+  <p class="updated">Last updated / Zuletzt aktualisiert: 2026-10-11</p>
 
   <section class="lang" id="en">
     <h2>Privacy Policy</h2>
@@ -121,8 +121,8 @@
       of gameplay events (session start, run start/end, wave progress) to a local file on your
       device, to help improve game balance. This log contains no user identifier and no device
       identifier — only a random session ID that resets every time you launch the App, with no
-      link between sessions or devices. Nothing is collected before you consent, and nothing is
-      sent over the network by the App itself.</li>
+      link between sessions or devices. Nothing is collected before you consent, and the analytics
+      log itself is never sent over the network by the App.</li>
       <li><strong>Cloud save backup (opt-in).</strong> If you consent, your castle progress
       (crystals and unlocked content — not your in-progress run) is backed up using your
       device's own platform account: Apple iCloud on iOS, Google Play Games Saved Games on
@@ -131,15 +131,28 @@
       under their respective privacy policies.</li>
       <li><strong>Advertising.</strong> The App shows optional rewarded video ads (for a run
       revive, a loot bonus, or an extra shop reroll — you always choose to watch, ads are never
-      forced) via Google AdMob. Google and its advertising partners may process device and
-      advertising identifiers to select and measure ads, as described in
+      forced) via Google AdMob. According to Google's data-safety disclosure for its Mobile Ads
+      SDK, the SDK collects and shares with Google your IP address (from which an approximate
+      location can be derived), app interactions (such as app launches, taps and video views),
+      diagnostics, and device and account identifiers (such as the Android advertising ID and an
+      app-set ID), for advertising, analytics and fraud prevention; this data is encrypted in
+      transit. You can reset or delete the advertising ID in your Android settings. Google and
+      its advertising partners may process device and advertising identifiers to select and
+      measure ads, as described in
       <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
       Where required by law (EEA, UK, Switzerland), you are asked for consent to personalized
       advertising via a standard Google consent message before any ad-related data processing;
       you can change your choice at any time in the App's Settings.</li>
       <li><strong>In-app purchases.</strong> Optional cosmetic purchases and a premium-currency
       wallet top-up are processed entirely by the Google Play Store or Apple App Store billing
-      system. The App never sees or stores your payment details.</li>
+      system. The App never sees or stores your payment details. To connect to the billing
+      system, the App uses Unity's In-App Purchasing SDK (Unity Technologies). According to
+      Unity's data-safety disclosure for this SDK (version 5.4 and later), it collects approximate
+      location, email address, personal and device identifiers, purchase history, and crash and
+      performance diagnostics in order to process purchases and for analytics; this data is
+      encrypted in transit and, per that disclosure, is not shared onward. The SDK offers no
+      separate way to switch this collection off or to delete it; Unity processes it under
+      <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity's Privacy Policy</a>.</li>
     </ul>
 
     <h3>What the App does not do</h3>
@@ -184,8 +197,8 @@
       Wellenfortschritt) in einer lokalen Datei auf deinem Gerät, um die Spielbalance zu
       verbessern. Dieses Protokoll enthält keine Nutzer- oder Geräte-ID — nur eine zufällige
       Sitzungs-ID, die bei jedem Start der App neu vergeben wird, ohne Verknüpfung zwischen
-      Sitzungen oder Geräten. Ohne deine Einwilligung wird nichts erfasst, und die App selbst
-      sendet nichts über das Netzwerk.</li>
+      Sitzungen oder Geräten. Ohne deine Einwilligung wird nichts erfasst, und das
+      Spielstatistik-Protokoll selbst sendet die App nie über das Netzwerk.</li>
       <li><strong>Cloud-Speicherung (Opt-in).</strong> Bei deiner Einwilligung wird dein
       Burgfortschritt (Kristalle und freigeschaltete Inhalte — nicht dein laufender Run) über
       das plattformeigene Konto deines Geräts gesichert: Apple iCloud auf iOS, Google Play
@@ -195,8 +208,13 @@
       <li><strong>Werbung.</strong> Die App zeigt optionale Video-Anzeigen mit Prämie (für eine
       Wiederbelebung, einen Beutebonus oder einen zusätzlichen Shop-Reroll — du entscheidest
       immer selbst, ob du die Anzeige ansiehst, Werbung wird nie erzwungen) über Google AdMob.
-      Google und dessen Werbepartner können Geräte- und Werbekennungen verarbeiten, um Anzeigen
-      auszuwählen und zu messen, wie in
+      Laut Googles Offenlegung zur Datensicherheit für das Mobile-Ads-SDK erhebt das SDK deine
+      IP-Adresse (aus der sich ein ungefährer Standort ableiten lässt), App-Interaktionen (etwa
+      App-Starts, Taps und Videoaufrufe), Diagnosedaten sowie Geräte- und Konto-Kennungen (etwa
+      die Android-Werbe-ID und eine App-Set-ID) und teilt sie mit Google, für Werbung, Analytics
+      und Betrugsprävention; die Übertragung ist verschlüsselt. Die Werbe-ID kannst du in den
+      Android-Einstellungen zurücksetzen oder löschen. Google und dessen Werbepartner können
+      Geräte- und Werbekennungen verarbeiten, um Anzeigen auszuwählen und zu messen, wie in
       <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener">Googles Datenschutzerklärung</a>
       beschrieben. Wo gesetzlich vorgeschrieben (EWR, Großbritannien, Schweiz), wirst du vor
       jeder werbebezogenen Datenverarbeitung über eine Standard-Einwilligungsmitteilung von
@@ -205,7 +223,14 @@
       <li><strong>In-App-Käufe.</strong> Optionale kosmetische Käufe und ein Aufladen der
       Premium-Währung werden vollständig über das Abrechnungssystem des Google Play Store bzw.
       Apple App Store abgewickelt. Die App sieht oder speichert deine Zahlungsdaten zu keinem
-      Zeitpunkt.</li>
+      Zeitpunkt. Für die Anbindung an das Abrechnungssystem nutzt die App das In-App-Purchasing-SDK
+      von Unity (Unity Technologies). Laut Unitys Offenlegung zur Datensicherheit für dieses SDK
+      (Version 5.4 und neuer) erhebt es ungefähren Standort, E-Mail-Adresse, personenbezogene und
+      Geräte-Kennungen, Kaufverlauf sowie Absturz- und Leistungsdiagnosen, um Käufe abzuwickeln
+      und für Analytics; die Übertragung ist verschlüsselt, und laut dieser Offenlegung werden die
+      Daten nicht weitergegeben. Das SDK bietet keine eigene Möglichkeit, diese Erhebung
+      abzuschalten oder die Daten zu löschen; Unity verarbeitet sie nach
+      <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unitys Datenschutzerklärung</a>.</li>
     </ul>
 
     <h3>Was die App nicht tut</h3>
